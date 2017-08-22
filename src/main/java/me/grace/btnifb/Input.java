@@ -10,6 +10,7 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
 
 
 public class Input {
@@ -25,9 +26,6 @@ public class Input {
     @NotNull
     @Min(10)@Max(1000)
     private int innum;
-
-
-    private String output;
 
     public String getUsername() {
         return username;
@@ -46,20 +44,12 @@ public class Input {
     }
 
 
-    public String getOutput() {
-        return output;
-    }
-
-    public void setOutput(String output) {
-        this.output = printout(innum);
-    }
 
 
-     public String printout(int inputnum) {
+     public ArrayList<String> printout(int inputnum) {
 
-         String finalprintout = null;
+         ArrayList finalprintout = new ArrayList();
 
-         // loop from number 1 to inputnum
          for (int counter = 1; counter <= inputnum; counter++) {
              //Initialize an empty string
              String PrintOut = "";
@@ -89,7 +79,7 @@ public class Input {
                  PrintOut = "" + counter;
              }
 
-             finalprintout += PrintOut;
+             finalprintout.add(PrintOut);
 
          }
 
