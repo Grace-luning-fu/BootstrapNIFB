@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Newfizzbuzz</title>
+</head>
+
+<body>
+
+<h1>welcome to Fizzbuzz</h1>
+
+<div th:each="item :${fBR}">
+    <p th:text="${item}"></p>
+</div>
+
+
+</body>
+</html>

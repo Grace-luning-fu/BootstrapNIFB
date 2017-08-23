@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Newfizzbuzz</title>
+</head>
+
+<body>
+
+
+<table>
+    <thead>
+    <th>UserName</th>
+    <th>Number</th>
+    </thead>
+
+    <tr th:each="item :${userList}">
+        <td th:text="${item.userName}">Name</td>
+        <td th:text="${item.innum}">Selected Number</td>
+    </tr>
+</table>
+
+</body>
+</html>

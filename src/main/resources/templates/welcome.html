@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Newfizzbuzz</title>
+</head>
+<body>
+
+
+<form th:object="${inputNum}" th:action="@{/}" method="post">
+
+    <span th:if="${#fields.hasErrors('userName')}" th:error="*{userName}">Name is required</span>
+    <p>Enter your Name: <input type="text" th:field="*{userName}" /></p>
+
+    <span th:if="${#fields.hasErrors('innum')}" th:error="*{innum}">Number must in between 10 to 1000</span>
+    <p>Enter a number: <input type="number" th:field="*{innum}" /></p>
+
+    <p><input type="submit" value="Play"></p>
+</form>
+
+
+
+</body>
+</html>
