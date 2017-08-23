@@ -32,6 +32,7 @@ public class MainController {
     {
         if(bindingResult.hasErrors())
         {
+            System.out.println(bindingResult.toString());
             return "welcome";
         }
         fizzbuzzRepo.save(fizzbuzz);
